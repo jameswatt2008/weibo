@@ -1,0 +1,28 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#define WBCustomColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a/255.0]
+
+#define WBRandomColor WBCustomColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
+#ifdef DEBUG  // 判断是否有DEBUG的宏, 如果有就编译下面一句, 如果没有就编译#else后面的一句
+#define WBLog(...)  NSLog(__VA_ARGS__)
+#else
+#define WBLog(...)
+#endif
+#define iOS7 ([UIDevice currentDevice].systemVersion.doubleValue >= 7.0)
+#import "UIImage+XC.h"
+#import "UIView+XC.h"
+#endif
