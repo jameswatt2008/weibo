@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"ddd");
+    NSLog(@"dddYYY");
     [super viewDidLoad];
 //    
 //    //添加一个搜索框
