@@ -67,7 +67,8 @@
     btn.item =item;
     btn.tag = self.tabBarButtons.count;
     
-    [btn addTarget:self action:@selector(btnOnClick :) forControlEvents:UIControlEventTouchUpInside];
+//    [btn addTarget:self action:@selector(btnOnClick :) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(btnOnClick :) forControlEvents:UIControlEventTouchDown];
     [self addSubview:btn];
     [self.tabBarBUttons addObject:btn];
     if (self.tabBarButtons.count == 1) {

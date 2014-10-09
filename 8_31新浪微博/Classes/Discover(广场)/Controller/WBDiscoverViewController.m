@@ -7,113 +7,55 @@
 //
 
 #import "WBDiscoverViewController.h"
-
+#import "UIImage+XC.h"
+#import "WBSearchBar.h"
 @interface WBDiscoverViewController ()
 
 @end
 
 @implementation WBDiscoverViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
+    NSLog(@"ddd");
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    
+//    //添加一个搜索框
+//    UISearchBar *searchBar = [[UISearchBar alloc]init];
+//    //xy无效
+//    searchBar.frame = CGRectMake(0, 0, 300, 35);
+//    searchBar.backgroundImage = [UIImage imageWithName:@"searchbar_textfield_background"];
+//    self.navigationItem.titleView = searchBar;
+//    UITextField *searchBar = [[UITextField alloc]init];
+//    //searchBar.borderStyle = UITextBorderStyleRoundedRect;边框样式
+//    searchBar.background = [UIImage resizeableImageWithName:@"searchbar_textfield_background"];
+////    searchBar.textAlignment = NSTextAlignmentCenter;设置水平居中
+//    searchBar.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+//    //设置清楚按钮
+//    searchBar.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    //添加放大镜
+//    UIImageView *search = [[UIImageView alloc]initWithImage:[UIImage imageWithName:@"searchbar_textfield_search_icon"]];
+//    //[searchBar addSubview:search];
+//    //设置放大镜为leftview
+//    search.width = 30;
+//    search.contentMode = UIViewContentModeCenter;//图片居中
+//    
+//    searchBar.leftView = search;
+//    searchBar.leftViewMode = UITextFieldViewModeAlways;
+//    //设置提示问题
+//    searchBar.placeholder = @"请输入要搜索的内容";
+//   // searchBar.textColor = [UIColor grayColor];
+//    searchBar.font = [UIFont systemFontOfSize:13];
+   
+    WBSearchBar *searchBar  = [[WBSearchBar alloc]init];
+
+    searchBar.placeholder = @"请输入要搜索的内容";
+    searchBar.frame = CGRectMake(0, 0, 300, 35);
+    self.navigationItem.titleView = searchBar;
+
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -12,22 +12,34 @@
 	<dict>
 		<key>5229DF6D-1084-490E-A1C3-B0E6C5A4E980</key>
 		<string>https://github.com/darkeye777/weibo.git</string>
+		<key>C8401300936AAF86F293DC7FD7C4CFD6C202F379</key>
+		<string>github.com:darkeye777/weibo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>8_31新浪微博.xcodeproj/project.xcworkspace</string>
+	<string>8_31新浪微博.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5229DF6D-1084-490E-A1C3-B0E6C5A4E980</key>
+		<string>../../../weibo</string>
+		<key>C8401300936AAF86F293DC7FD7C4CFD6C202F379</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/darkeye777/weibo.git</string>
+	<string>github.com:darkeye777/weibo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5229DF6D-1084-490E-A1C3-B0E6C5A4E980</string>
+	<string>C8401300936AAF86F293DC7FD7C4CFD6C202F379</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8401300936AAF86F293DC7FD7C4CFD6C202F379</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DAWeibo</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

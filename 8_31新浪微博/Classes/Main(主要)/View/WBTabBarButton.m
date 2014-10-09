@@ -21,6 +21,8 @@
         self.titleLabel.font = [UIFont systemFontOfSize:13];
         
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
+       
     }
     return self;
 }
@@ -55,5 +57,8 @@
     [self setImage:item.selectedImage forState:UIControlStateSelected];
     [self setTitle:item.title forState:UIControlStateNormal];
 }
-
+-(void)setHighlighted:(BOOL)highlighted
+{
+    
+}
 @end

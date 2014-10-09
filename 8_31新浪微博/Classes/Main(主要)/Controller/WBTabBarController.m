@@ -13,6 +13,8 @@
 #import "WBProfileViewController.h"
 #import "WBImageTool.h"
 #import "WBTabBar.h"
+#import "WBNavigationController.h"
+#import "UIImage+XC.h"
 @interface WBTabBarController()<WBTabBarDelegate>
 
 @property (nonatomic,weak) WBTabBar *customTabBar;
@@ -44,7 +46,7 @@
         WBMessageViewController *message = [[WBMessageViewController alloc] init];
         [self addChildController:message title:@"消息" norImage:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
         // 3.广场
-        WBDiscoverViewContreller *discover =[[WBDiscoverViewContreller alloc]init];
+        WBDiscoverViewController *discover =[[WBDiscoverViewController alloc]init];
         [self addChildController:discover title:@"广场" norImage:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
         // 4.我
         WBProfileViewController *profile = [[WBProfileViewController alloc] init];
@@ -59,7 +61,9 @@
 - (void)addChildController:(UIViewController *)childVc title:(NSString *)title norImage:(NSString *)norImage selectedImage:(NSString *)selectedImage
 {
     childVc.view.backgroundColor = WBRandomColor;
-    childVc.tabBarItem.title = title;
+    //childVc.tabBarItem.title = title;
+//    childVc.navigationItem.title = title;
+    childVc.title = title;
   //  self.tabBar.tintColor = [UIColor greenColor];
     childVc.tabBarItem.image = [UIImage imageWithName:norImage];
     UIImage *selImage = [UIImage imageWithName:selectedImage];
@@ -74,15 +78,18 @@
         selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     childVc.tabBarItem.selectedImage = selImage;
-    [self addChildViewController:childVc];
-    
+    //包装一个导航条
+    WBNavigationController *nav =[[WBNavigationController alloc]initWithRootViewController:childVc];
+    [self addChildViewController:nav];
+    //[self addChildViewController:childVc];
+    //添加一个自定义选项卡按钮
     [self.customTabBar addTabBarButton:childVc.tabBarItem];
 
  }
 
 -(void) tabBar:(WBTabBar *)tabBar from:(NSInteger)from to:(NSInteger)to;
 {
-    WBLog(@"from = %d, to = %d",from,to);
+   // WBLog(@"from = %d, to = %d",from,to);
     self.selectedIndex = to;
 }
 

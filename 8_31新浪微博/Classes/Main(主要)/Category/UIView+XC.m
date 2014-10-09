@@ -2,7 +2,7 @@
 //  UIView+XC.m
 //  8_31新浪微博
 //
-//  Created by 谢琛 on 14/9/1.
+//  Created by 谢琛 on 14/9/14.
 //  Copyright (c) 2014年 谢琛. All rights reserved.
 //
 
@@ -81,4 +81,5 @@
 {
     return self.center.y;
 }
+
 @end
